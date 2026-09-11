@@ -30,14 +30,14 @@ jobs:
           mkdir -p project
           unzip -q LinkzOfflinePrototype_v0_1.zip -d project
           echo "Extracted files:"
-          find project -maxdepth 3 -type f | sort
+          find project -maxdepth 4 -type f | sort
 
       - name: Build Debug APK
-        working-directory: project/LinkzOfflinePrototype_v0_1
+        working-directory: project
         run: gradle assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: LinkzOfflinePrototype-debug-apk
-          path: project/LinkzOfflinePrototype_v0_1/app/build/outputs/apk/debug/app-debug.apk
+          path: project/app/build/outputs/apk/debug/app-debug.apk
