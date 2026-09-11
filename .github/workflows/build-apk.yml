@@ -30,7 +30,7 @@ jobs:
           rm -rf project
           mkdir -p project
 
-          unzip -q LinkzOfflinePrototype_v0_4.zip -d project
+          unzip -q LinkzOfflinePrototype_v0_5.zip -d project
 
           echo "===== PROJECT FILES ====="
           find project -maxdepth 5 -type f | sort
